@@ -1,0 +1,137 @@
+
+.equipo-item {
+    
+    border: 0.5px solid #D9D9D9;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    .equipo-item__foto-container {
+        padding-top: 10px;
+      width: 100%;
+      height: 200px; // Ajusta la altura según sea necesario
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .equipo-item__foto {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%; // Convertir en un círculo perfecto
+      }
+    }
+   
+    .MuiCardContent-root {
+      padding: 20px;
+  
+      .MuiTypography-root {
+        margin-bottom: 10px;
+        font-family: var(--font-robotoFlex);
+      }
+  
+      .MuiTypography-h6 {
+        font-family: var(--font-robotoFlex);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #333;
+      }
+  
+      .MuiTypography-subtitle1 {
+        font-size: 1.1rem;
+        color: #666;
+        font-family: var(--font-robotoFlex);
+      }
+  
+      .MuiTypography-body2 {
+        font-family: var(--font-robotoFlex);
+        font-size: 1rem;
+        color: #888;
+      }
+  
+      .linkedin-link {
+        color: #0077b5; // Color azul de LinkedIn
+        text-decoration: none;
+        font-size: 1rem;
+        display: block;
+        margin-top: 10px;
+        width: 10%;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+
+
+    
+  }
+// .exp{
+//     width: 80%;
+// }
+.link_in{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: #1C8BBF;
+}  
+.exp_in{
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo_in{
+    height: 50px;
+    width: 50px;
+}
+.Nombre_cargo{
+  // font-family: var(--font-poppins);
+  width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seccInfo{
+  margin-top: 30px;
+  // background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
+  // width: 100%;
+  // height: 100px;
+  margin-bottom: 16px;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.equipo-item.css-bhp9pd-MuiPaper-root-MuiCard-root{
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.419);
+}
+.MuiCardContent-root.seccInfo.css-46bh2p-MuiCardContent-root{
+  background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
+  background-color: red;
+  height: 100px;
+  display: flex;
+  // width: 100%;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.equipo-item.css-s18byi{
+  background-color: rgba(255, 255, 255, 0.419);
+  border-radius: 20px;
+}
+.MuiCardContent-root.seccInfo.css-1qw96cp{
+  background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
+  // background-color: #e5e5e5;
+  height: 100px;
+  display: flex;
+  // width: 100%;
+  flex-direction: row;
+  padding: 10px;
+}

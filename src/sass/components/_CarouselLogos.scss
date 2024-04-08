@@ -1,0 +1,27 @@
+.carousel-container {
+    width: 100%;
+    margin-top: 20px;
+    // margin-left: 5%;
+    // margin-right: 5%;
+    max-width: 90%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; // Ajusta la altura según sea necesario
+
+
+}
+
+.logo-image {
+    padding: 1%;
+    max-width: 100%; // Ajusta el tamaño máximo de la imagen según sea necesario
+    max-height: 100%; // Ajusta la altura máxima de la imagen según sea necesario
+}
+
+.css-1ps6pg7-MuiPaper-root{
+    display: flex;
+    justify-content: space-around;
+}

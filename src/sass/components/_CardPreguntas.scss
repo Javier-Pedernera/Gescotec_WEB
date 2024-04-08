@@ -1,0 +1,120 @@
+.card_Logo {
+  position: relative;
+  width: 210px;
+  height: 210px; 
+  text-align: center;
+  overflow: hidden;
+
+  .divLogo {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/solo_Logo.png');
+    background-size: cover;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  &:hover {
+  transform: rotateY(180deg);
+  & .divLogo {
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transform: rotateY(180deg);
+    // background-color: #666;
+    background-image: url('../../assets/images/solo_Logoback.png');
+    // filter: blur(0.5X);
+    & p{
+      display: flex;
+      // transform: rotateX(45deg);
+      // transform: rotateY(180deg);
+    }
+    
+  }}
+
+}
+
+.card {
+  border-radius: 5px;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(to bottom right, #8ec9e6, #bfd8e4);
+  transition: transform 0.5s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  flex-direction: column-reverse;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  .imagencardPreguntas  {
+    // transition: opacity 0.1s ease; 
+    opacity: 0; 
+    width: 100%; 
+    position: fixed;
+  }
+
+  .text_rombo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 16px;
+    color: #474646;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    transform: scale(1.25) rotate(0deg); /* Escalar la tarjeta al hacer hover */
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #e9e9e9, #d4d2d2);
+    border-radius: 5px;
+    .text_rombo {
+      transform: rotate(0deg);
+      text-align: center;
+      color: #C95F3B;
+    }
+    .imagencardPreguntas {
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+  // @media (min-width: 768px) {
+  //   .card{
+  //       flex-direction: row;
+  //       width: 45%;
+  //   }
+  // }
+
+
+    // img {
+    //   width: 200px;
+    //   height: 200px;
+    //   border-top-left-radius: 10px;
+    //   border-top-right-radius: 10px;
+    // //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    // }
+  
+    // div {
+    //   padding: 20px;
+    // }
+  
+    // h3 {
+    //   font-size: 20px;
+    //   margin-bottom: 10px;
+    // }
+  
+    // p {
+    //   font-size: 16px;
+    //   color: #666;
+    //   margin-bottom: 10px;
+    // }

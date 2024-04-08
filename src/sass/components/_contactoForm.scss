@@ -1,0 +1,95 @@
+
+.All_div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.container_Form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    &.blur{
+        filter: blur(4px);
+        & h4{
+            filter: blur(4px);
+        }
+    }
+    
+    & h4{
+        font-family: var(--font-robotoSerif);
+        @media (max-width: 768px) {
+            font-size: large;
+            font-weight: 600;
+          }
+    }
+}
+
+
+   .MuiContainer-root.MuiContainer-maxWidthLg.container_Form.css-1oqqzyl-MuiContainer-root{
+        display: flex;
+        align-items: center;
+    }
+.div_Form{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    & .submit_btn{
+    background-color: #1c8bbf;
+    &:hover{
+     background-color: var(--secundary-color);   
+    }
+}
+}
+form{ 
+
+    width: 80%;
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      & .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+        font-family: var(--font-robotoSerif);
+        color: #505050;
+        font-size: small;
+        font-weight: 500;
+      }
+      & .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root{
+        font-family: var(--font-poppins);
+        font-size: 13px;
+        font-weight: 400;
+        color: #505050;
+      }
+    & hr{
+        border-top: #BCBCBC;
+        border-left: #BCBCBC;
+        border-color: #BCBCBC;
+    }
+}
+.alert_Success {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    &.visible{
+        opacity: 1;
+    }
+}
+.Alert_visible_div{
+    // width: 100%;
+    margin-top: 20%;
+    margin-left: 40%;
+    height: 100%;
+    position: fixed;
+    min-height: 90px;
+    z-index: 1;
+}
+
+form.css-1wh62b1{
+    background-color: #eceaead1;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.container_Form.css-1qsxih2{
+    display: flex;
+}
