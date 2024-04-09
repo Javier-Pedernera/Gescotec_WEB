@@ -10,12 +10,12 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import startTypingAnimation from '../utils/typingAnimation';
 import logo from '../assets/images/LogoNuevo_gescotec.jpg'
 import fondo1 from '../assets/images/3.jpg'
-import fondo2 from '../assets/images/8.jpg'
+import fondo2 from '../assets/images/11.png'
 import card1 from '../assets/images/13.png'
 import card2 from '../assets/images/14.png'
 import card3 from '../assets/images/15.png'
 import card4 from '../assets/images/16.png'
-import imagenidea from '../assets/images/1.jpg'
+import imagenidea from '../assets/images/1.png'
 import CarouselLogos from '../components/CarouselLogos';
 import reasonImage from '../assets/images/18.png'
 

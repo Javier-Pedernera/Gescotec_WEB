@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import startTypingAnimation from '../utils/typingAnimation';
 import logoGesco from '../assets/images/Logo_nombre_vertical.png'
 import mision_vision from '../assets/images/26.png'
-import values from '../assets/images/27.png'
 
 const Equipo = () => {
     const { openMenu, setOpenMenu } = useTheme();

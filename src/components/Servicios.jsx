@@ -41,9 +41,10 @@ const Servicios = () => {
         return () => observer.disconnect();
     }, []);
 
+
     return (
         <section className={`services-section ${openMenu ? 'blur' : ''}`}>
-            <h2>Nuestros Servicios</h2>
+            {/* <h2>Nuestros Servicios</h2> */}
 
             <div className="service">
                 <div className='imagenesDiv'>
