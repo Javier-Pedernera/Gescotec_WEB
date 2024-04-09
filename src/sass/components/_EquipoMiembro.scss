@@ -1,28 +1,31 @@
 
 .equipo-item {
+    height: 400px;
     
     border: 0.5px solid #D9D9D9;
     border-radius: 20px;
     transition: transform 0.3s ease;
-  
+  display: flex;
+  flex-direction: column;
     &:hover {
       transform: translateY(-5px);
     }
   
     .equipo-item__foto-container {
+      display: flex;
         padding-top: 10px;
       width: 100%;
-      height: 200px; // Ajusta la altura según sea necesario
+      height: 200px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-  
+
       .equipo-item__foto {
-        width: auto;
-        height: 100%;
+        width: 50%;
+        // height: 60%;
         object-fit: cover;
         border-radius: 50%; // Convertir en un círculo perfecto
       }
@@ -72,9 +75,6 @@
 
     
   }
-// .exp{
-//     width: 80%;
-// }
 .link_in{
   display: flex;
   justify-content: flex-end;
@@ -91,7 +91,6 @@
     width: 50px;
 }
 .Nombre_cargo{
-  // font-family: var(--font-poppins);
   width: 90%;
     display: flex;
     flex-direction: column;
@@ -99,24 +98,25 @@
 }
 .seccInfo{
   margin-top: 30px;
-  // background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
-  // width: 100%;
-  // height: 100px;
   margin-bottom: 16px;
 }
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.equipo-item.css-bhp9pd-MuiPaper-root-MuiCard-root{
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.419);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.745);
+    width: auto;
+    max-width: 320px;
+    
 }
+
 .MuiCardContent-root.seccInfo.css-46bh2p-MuiCardContent-root{
   background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
-  background-color: red;
   height: 100px;
   display: flex;
-  // width: 100%;
   flex-direction: row;
   padding: 10px;
 }
@@ -124,6 +124,8 @@
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.equipo-item.css-s18byi{
   background-color: rgba(255, 255, 255, 0.419);
   border-radius: 20px;
+  height: 400px;
+  width: 200px;
 }
 .MuiCardContent-root.seccInfo.css-1qw96cp{
   background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);

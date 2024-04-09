@@ -1,5 +1,4 @@
 import '../sass/components/_Home.scss';
-import companyImage from '../assets/images/fondo1.jpg';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import Card from '../components/cardPreguntas';
 import { useTheme } from '../contexts/ThemeContext';

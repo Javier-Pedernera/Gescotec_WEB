@@ -38,14 +38,17 @@ for (let i = 0; i < logos.length; i += groupSize) {
 }
 
 
-const CarouselLogos = () => {
+const CarouselLogos = ({ grayscale }) => {
+
+    console.log(grayscale);
+
     return (
         <Carousel
             animation="fade"
             timeout={3000}
             navButtonsAlwaysVisible={false}
             indicators={false}
-            className="carousel-container"
+            className={grayscale ? "grayCarousel" : "carousel-container"}
         >
             {groupLogos.map((group, index) => (
                 <Paper key={index} className="logo-container"> {/* Crea un contenedor para cada grupo de logos */}

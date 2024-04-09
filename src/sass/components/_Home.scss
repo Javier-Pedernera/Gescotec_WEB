@@ -379,24 +379,26 @@ margin-bottom: 100px;
   max-height: 100%;
 }
 
-.reasons-list-container {
+
+.reasons-list-container{
   width: 50%;
-}
+  & h2{
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: rgb(50, 50, 50);
+  
+  }
+  & ul{
+      list-style-type: none;
+      padding: 0;
+      color: rgb(50, 50, 50);
+      font-weight: 600;
+  }
 
-.reasons-list-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  color: rgb(50, 50, 50);
-
-}
-
-.reasons-list-container ul {
-  list-style-type: none;
-  padding: 0;
-  color: rgb(50, 50, 50);
-  font-weight: 400;
-}
-
-.reasons-list-container li {
-  margin-bottom: 10px;
+  & li{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
 }

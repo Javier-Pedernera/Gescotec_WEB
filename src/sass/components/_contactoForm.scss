@@ -1,5 +1,19 @@
 
 .All_div{
+    position: relative;
+  &::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/images/fondo1.png');
+  background-size: contain;
+  background-position: center;
+  opacity: 0.3; /* Ajusta el nivel de opacidad según sea necesario */
+  z-index: -1;
+  }
     display: flex;
     width: 100%;
     height: 100%;
@@ -36,7 +50,7 @@
 .div_Form{
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     & .submit_btn{
     background-color: #1c8bbf;
     &:hover{
@@ -88,7 +102,8 @@ form{
 }
 
 form.css-1wh62b1{
-    background-color: #eceaead1;
+    background-color: #f4f4f498;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .MuiContainer-root.MuiContainer-maxWidthLg.container_Form.css-1qsxih2{
     display: flex;

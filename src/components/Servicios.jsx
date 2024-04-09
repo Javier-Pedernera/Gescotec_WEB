@@ -10,6 +10,7 @@ import image7 from '../assets/images/25.png'
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CiLinkedin } from "react-icons/ci";
+import CarouselLogos from './CarouselLogos';
 
 const Servicios = () => {
     const { openMenu, setOpenMenu } = useTheme();
@@ -22,7 +23,7 @@ const Servicios = () => {
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5 // Cuando al menos el 50% de la sección sea visible
+            threshold: 0.5
         };
 
         const handleIntersect = (entries, observer) => {
@@ -95,7 +96,7 @@ const Servicios = () => {
 
             <div className="service">
                 <div className='imagenesDiv'>
-                    <img src={image1} alt="Soporte y Mantenimiento" />
+                    <img className='imagenRotate' src={image1} alt="Soporte y Mantenimiento" />
                 </div>
                 <div>
                     <h3>Soporte y Mantenimiento</h3>
@@ -107,17 +108,20 @@ const Servicios = () => {
             </div>
 
             <div className="casoExito" ref={casoExitoRef}>
-
                 <div className='exitoText'>
                     <h3>Casos de Éxito</h3>
                     <p>
                         Nuestra colaboración con Zurich es testimonio de nuestra capacidad para entregar soluciones que no solo cumplen, sino que superan las expectativas.
+                        Nuestra colaboración se destaca por nuestra capacidad para anticipar las demandas cambiantes del mercado y adaptarnos rápidamente para ofrecer resultados sobresalientes. Nos esforzamos por ir más allá de las expectativas, no solo cumpliendo con los requisitos acordados, sino también identificando oportunidades adicionales para agregar valor y optimizar los procesos existentes.
+                        Nuestra asociación con Zurich es más que un simple proyecto; es un testimonio de nuestra capacidad para enfrentar desafíos complejos con creatividad, dedicación y experiencia.
                     </p>
                 </div>
                 <div className='imagenExito'>
                     <img src={image7} alt="Casos de Éxito" />
                 </div>
             </div>
+
+
             <div className='allContactSection'>
                 <div className="contact-section">
                     <h3>Tu futuro empieza aquí</h3>
@@ -131,10 +135,10 @@ const Servicios = () => {
 
                 <div className="linkedin-section">
                     <p>Mantente al día con las últimas novedades y logros de Gescotec siguiéndonos en LinkedIn.</p>
-                    <Link to="/contactanos" className="link_presupuesto_btn" > <CiLinkedin className='linkedIN'/></Link >
+                    <Link to="https://www.linkedin.com/company/gescotec-spa" className="link_presupuesto_btn" target="_blank" > <CiLinkedin className='linkedIN' /></Link >
                 </div>
             </div>
-
+            <CarouselLogos grayscale={true} />
         </section>
     );
 }
