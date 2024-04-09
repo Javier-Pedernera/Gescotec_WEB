@@ -58,13 +58,19 @@
     background-image: url('../../assets/images/Logo_direcc.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 300px;
+    width: 320px;
     height: 100px;
     display: flex;
     background-position: center;
     // font-size: 24px;
     // font-weight: bold;
     border-radius: 5px;
+    @media (max-width: 500px) {
+      width: 180px;
+    }
+    @media ((min-width: 500px) and (max-width: 700px)) {
+      width: 200px;
+    }
   }
   .socialLinks{
     width: 33%;
@@ -86,3 +92,4 @@
       border: 1px solid rgba(142, 141, 141, 0.654);
     }
   }
+ 
