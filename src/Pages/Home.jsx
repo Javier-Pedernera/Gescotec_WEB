@@ -113,7 +113,7 @@ const Home = () => {
                                 En Gescotec, nos adelantamos al futuro creando soluciones de software que transforman negocios. Fundada con el espíritu de innovación y excelencia, nuestra empresa es tu aliado ideal para navegar por el complejo mundo tecnológico de hoy. Ofrecemos servicios de consultoría de alta calidad a un costo accesible, permitiendo a empresas de todos los tamaños ser más competitivas y eficientes.
                             </div>
                             <div className='cont_btn'>
-                                <div className="more_btn"><Link to="/contactanos" className="link_pres_btn" >¿Quiénes somos?</Link >
+                                <div className="more_btn"><Link to="/equipo" className="link_pres_btn" >¿Quiénes somos?</Link >
                                 </div>
                                 <div className="pres_btn">  <Link to="/contactanos" className="link_pres_btn" > Presupuesto</Link > <IoDocumentTextOutline />
                                 </div>
