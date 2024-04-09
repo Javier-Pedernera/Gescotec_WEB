@@ -138,12 +138,10 @@
   flex-direction: column;
 }
 .MuiCardContent-root.seccInfo.css-1qw96cp{
-  background: linear-gradient(to right, #e5e5e5, #d0d0d0, #e5e5e5);
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); 
-  // background-color: #e5e5e5;
+  background: linear-gradient(to right, #f8f8f8, #ededed,#f8f8f8, #ededed, #f8f8f8);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
   height: 100px;
   display: flex;
-  // width: 100%;
   flex-direction: row;
-  padding: 10px;
+  justify-content: flex-end;
 }
