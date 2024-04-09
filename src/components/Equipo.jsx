@@ -67,7 +67,7 @@ const Equipo = () => {
 
     return (
         <div className={`equipo ${openMenu ? 'blur' : ''}`}>
-            <Container maxWidth="lg">
+            <div className='Cont_equipo'>
                 {/* Introducción del equipo */}
                 <div className="equipo-intro">
                     {/* <Typography variant="h4" align="center" gutterBottom>
@@ -123,12 +123,12 @@ const Equipo = () => {
 
                 <div className="values_content">
                     <div className='values_title'>
-                        <div>
+                        <div className='principios_Text'>
                             <Typography variant="h5" gutterBottom>
                                 Principios de Gescotec
                             </Typography>
                             <Typography variant="body1">
-                                Nuestros principios fundamentales guían nuestra forma de trabajar y nos ayudan a mantenernos enfocados en nuestro propósito:
+                                Nuestros principios fundamentales guían nuestra forma de trabajar y nos ayudan a mantenernos enfocados en nuestro propósito.
                             </Typography>
                         </div>
 
@@ -205,7 +205,7 @@ const Equipo = () => {
                         </Grid>
                     ))}
                 </Grid>
-            </Container>
+            </div>
         </div>
     );
 }
