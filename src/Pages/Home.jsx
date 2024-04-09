@@ -18,6 +18,12 @@ import card4 from '../assets/images/16.png'
 import imagenidea from '../assets/images/1.png'
 import CarouselLogos from '../components/CarouselLogos';
 import reasonImage from '../assets/images/18.png'
+import ico1 from '../assets/images/ico1.png'
+import ico2 from '../assets/images/ico2.png'
+import ico3 from '../assets/images/ico3.png'
+import ico4 from '../assets/images/ico4.png'
+import ico5 from '../assets/images/ico5.png'
+import ico6 from '../assets/images/ico6.png'
 
 const Home = () => {
 
@@ -54,28 +60,28 @@ const Home = () => {
         {
             title: 'Desarrollo de Aplicaciones Móviles',
             imageSrc: `${card1}`,
-            // description: 'La inteligencia artificial (IA) está revolucionando el mundo del desarrollo de software. Las empresas que la implementan experimentan una mayor eficiencia, menores costos y una capacidad sin precedentes para crear aplicaciones innovadoras.',
+            // description:
         },
         {
             title: 'Desarrollo Web',
             imageSrc: `${card2}`,
-            // description: 'La inteligencia artificial optimiza el código existente, eliminando redundancias y aplicando mejores prácticas de codificación para un desarrollo más rápido y menos propenso a errores.',
+            // description:
         },
         {
             title: 'Logo',
             // imageSrc:    ,
-            // description: 'Automatiza tareas tediosas del desarrollo de software, liberando a los desarrolladores para que se centren en actividades más creativas y estratégicas.',
+            // description: 
         },
         {
             title: 'Software Factory',
             imageSrc: `${card3}`,
-            // description: 'Automatiza tareas tediosas del desarrollo de software, liberando a los desarrolladores para que se centren en actividades más creativas y estratégicas.',
+            // description:
         },
 
         {
             title: 'Coaching Agile',
             imageSrc: `${card4}`,
-            // description: 'Detecta y corrige errores potenciales antes de que ocurran, gracias al análisis de patrones anómalos en el código, lo que reduce el tiempo necesario para pruebas y depuraciones.',
+            // description:
         },
     ];
 
@@ -121,21 +127,38 @@ const Home = () => {
                     </div>
                     <div className='Deque'>¿De qué manera podemos ayudar a las empresas?
                     </div>
-
                     <div className="cards-container">
-                        <div className="cardConteiner3">
-
-                            {cardsData.map((card, index) => (
+                        <div className="cardConteiner1">
+                            {cardsData.slice(0, 2).map((card, index) => (
                                 <Card
                                     key={index}
                                     title={card.title}
                                     imageSrc={card.imageSrc}
                                     description={card.description}
-                                    logo={card.title == "Logo" ? true : false}
+                                    logo={card.title === "Logo" ? true : false}
+                                />
+                            ))}
+                        </div>
+                        <div className="cardConteiner2">
+                            <Card
+                                key={2}
+                                title={cardsData[2].title}
+                                logo={true}
+                            />
+                        </div>
+                        <div className="cardConteiner3">
+                            {cardsData.slice(3).map((card, index) => (
+                                <Card
+                                    key={index + 3}
+                                    title={card.title}
+                                    imageSrc={card.imageSrc}
+                                    description={card.description}
+                                    logo={card.title === "Logo" ? true : false}
                                 />
                             ))}
                         </div>
                     </div>
+
                     <div className='Deque'>
                         Tu logo luciría perfecto aquí
                     </div>
@@ -152,11 +175,22 @@ const Home = () => {
                             <div className="reasons-list-container">
                                 <h2>¿Por qué nos eligen las empresas?</h2>
                                 <ul>
-                                    <li>Experiencia y conocimiento técnico</li>
-                                    <li>Compromiso con la innovación</li>
-                                    <li>Enfoque centrado en el cliente</li>
-                                    <li>Cumplimiento de plazos y presupuestos</li>
-                                    <li>Soporte técnico y atención al cliente</li>
+                                   <div className='ReasonDiv'>
+                                    <img src={ico6} className='iconoList' alt="" />  <li>Experiencia y conocimiento técnico</li>
+                                    </div> 
+                                    <div className='ReasonDiv'>
+                                    <img src={ico3} className='iconoList' alt="" />  <li>Compromiso con la innovación</li>
+                                    </div>
+                                    <div className='ReasonDiv'>
+                                    <img src={ico1} className='iconoList' alt="" />  <li>Enfoque centrado en el cliente</li>
+                                    </div>
+                                    <div className='ReasonDiv'>
+                                    <img src={ico2} className='iconoList' alt="" />  <li>Cumplimiento de plazos y presupuestos</li>
+                                    </div>
+                                    <div className='ReasonDiv'>
+                                    <img src={ico4} className='iconoList' alt="" />  <li>Soporte técnico y atención al cliente</li>    
+                                    </div>
+                                    
                                 </ul>
                             </div>
                         </div>
