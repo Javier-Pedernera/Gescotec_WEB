@@ -85,7 +85,7 @@ const Home = () => {
         },
     ];
 
-    console.log(showBubble);
+    // console.log(showBubble);
     return (
         <div className={`home ${openMenu ? 'blur' : ''}`}>
             <div className="hero-section">
@@ -95,8 +95,8 @@ const Home = () => {
                     ]
                     }
                     className="imageParallax"
-                >               <div class="hero-text">
-                        <div class="diamond">
+                >               <div className="hero-text">
+                        <div className="diamond">
                             <h1>"Utiliza soluciones tecnológicas para impulsar tu empresa hacia nuevas alturas, reduciendo costos y aumentando la productividad". </h1>
                             <p>Steve Jobs</p>
                         </div>

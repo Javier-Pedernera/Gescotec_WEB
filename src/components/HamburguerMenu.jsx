@@ -6,7 +6,7 @@ const HamburgerMenu = ({ setopen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { openMenu, setOpenMenu } = useTheme();
 
-  console.log(openMenu);
+  // console.log(openMenu);
 
   const toggleMenu = () => {
     setOpenMenu(!isOpen)

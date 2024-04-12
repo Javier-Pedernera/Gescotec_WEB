@@ -57,6 +57,9 @@ const ContactoForm = () => {
     const [error, setError] = useState('');
     const { openMenu, setOpenMenu } = useTheme();
     const [loading, setLoading] = useState(false);
+    const publicKey = import.meta.env.VITE_API_PUBLICKEY;
+    const service = import.meta.env.VITE_API_SERVICE;
+    const template = import.meta.env.VITE_API_TEMPLATE;
 
     const [formData, setFormData] = useState({
         nombre: '',
@@ -70,7 +73,6 @@ const ContactoForm = () => {
         consentimiento: false,
         empleados: ''
     });
-
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData(prevState => ({
@@ -85,8 +87,8 @@ const ContactoForm = () => {
         setLoading(true);
 
         emailjs
-            .send('service_45txkdg', 'template_t9lq289', formData, {
-                publicKey: 'Y8d1DNvbtNWOse2f3',
+            .send(service, template, formData, {
+                publicKey: publicKey,
             })
             .then(
                 (response) => {
@@ -153,7 +155,6 @@ const ContactoForm = () => {
 
             <Typography variant="h4" align="center" gutterBottom>Contáctanos</Typography>
             <FormContainer onSubmit={handleSubmit}>
-
                 <RowContainer>
                     <FormControl label="Nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
                     <FormControl label="Apellidos" name="apellidos" value={formData.apellidos} onChange={handleChange} required />

@@ -40,7 +40,7 @@ for (let i = 0; i < logos.length; i += groupSize) {
 
 const CarouselLogos = ({ grayscale }) => {
 
-    console.log(grayscale);
+    // console.log(grayscale);
 
     return (
         <Carousel

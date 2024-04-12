@@ -18,7 +18,7 @@ const Header = () => {
     e.preventDefault();
   }
   // console.log("header open menu", openMenu);
-  console.log("active page name", activePage);
+  // console.log("active page name", activePage);
 
   return (
     <header className="header">
