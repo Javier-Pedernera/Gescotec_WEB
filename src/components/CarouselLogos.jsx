@@ -12,7 +12,8 @@ import logotipo_precision_2018 from '../assets/logos/empresa7.png'
 import Mettler_Toledo from '../assets/logos/empresa8.png'
 import oaxaca from '../assets/logos/empresa9.png'
 import Spincorp from '../assets/logos/empresa10.png'
-import upana2 from '../assets/logos/empresa11.png'
+import upana2 from '../assets/logos/empresa11.png';
+import Sercotec from '../assets/logos/empresa12.png'
 import Agrega_tu_Logo from '../assets/logos/Agrega_tu_logo.png'
 
 const logos = [
@@ -20,6 +21,7 @@ const logos = [
     laboratorioHemoderivados,
     Logo_Chilena_2018,
     Logo_Zurich,
+    Sercotec,
     logoCRESE,
     logo_euroamerica,
     logotipo_precision_2018,
