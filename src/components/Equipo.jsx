@@ -136,50 +136,50 @@ const Equipo = () => {
                     </div>
                     <div className='valores'>
                         <ul>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Nuestra constante Innovación</h3>
                                     <p>Nos permite ofrecer soluciones tecnológicas avanzadas y adaptadas a las últimas tendencias del mercado.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Compromiso con la calidad</h3>
                                     <p>Nos esforzamos por garantizar la excelencia en cada producto y servicio que ofrecemos, priorizando la satisfacción del cliente.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Transparencia y Honestidad</h3>
                                     <p>Valoramos la comunicación abierta y honesta en todas nuestras interacciones comerciales, construyendo relaciones basadas en la confianza mutua.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Orientación al cliente</h3>
                                     <p>Colocamos las necesidades y expectativas de nuestros clientes en el centro de nuestras operaciones, trabajando para superar sus expectativas en cada proyecto.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Trabajo en equipo colaborativo</h3>
                                     <p>Promovemos un ambiente de trabajo donde la colaboración y el apoyo mutuo son fundamentales para alcanzar nuestros objetivos.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Responsabilidad social y ambiental</h3>
                                     <p>Nos comprometemos a operar de manera ética y sostenible, contribuyendo positivamente al bienestar de la sociedad y al cuidado del medio ambiente.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Mejora continua</h3>
                                     <p>Buscamos constantemente oportunidades para aprender y crecer, buscando la excelencia en todo lo que hacemos y adaptándonos a los cambios del entorno.</p>
                                 </div>
                             </li>
-                            <li class="value">
-                                <div class="value-content">
+                            <li className="value">
+                                <div className="value-content">
                                     <h3># Ética empresarial</h3>
                                     <p>Actuamos con integridad y respeto en todas nuestras actividades comerciales, cumpliendo siempre con los más altos estándares éticos y legales.</p>
                                 </div>

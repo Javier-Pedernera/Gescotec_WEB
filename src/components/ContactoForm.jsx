@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import { TextField, Checkbox, Button, FormControlLabel, Container, Typography, CircularProgress, MenuItem } from '@mui/material';
+import { TextField, Checkbox, Button, FormControlLabel, Container, Typography, MenuItem } from '@mui/material';
 import { styled } from '@mui/system';
 import { css } from '@emotion/react';
 import '../sass/components/_contactoForm.scss'
 import { useTheme } from '../contexts/ThemeContext';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+import GradientCircularProgress from './loader';
 
 const FormContainer = styled('form')({
     marginTop: 16,
@@ -36,10 +37,9 @@ const LoaderContainer = styled('div')({
     position: 'fixed',
     height: '100%',
     width: '100%',
-    // display: 'flex',
-    // justifyContent: 'center',
-    marginTop: '25%',
-    marginLeft: '50%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 1
 });
 
@@ -54,13 +54,10 @@ const SubmitButton = styled(Button)(
 
 const ContactoForm = () => {
     const [alertaVisible, setAlertaVisible] = useState(false);
-    const [error, setError] = useState('');
-    const { openMenu, setOpenMenu } = useTheme();
     const [loading, setLoading] = useState(false);
-    const publicKey = import.meta.env.VITE_API_PUBLICKEY;
-    const service = import.meta.env.VITE_API_SERVICE;
-    const template = import.meta.env.VITE_API_TEMPLATE;
-
+    const [error, setError] = useState(false);
+    const { openMenu, setOpenMenu } = useTheme();
+    const url_send_email = import.meta.env.VITE_API_URL_EMAIL
     const [formData, setFormData] = useState({
         nombre: '',
         apellidos: '',
@@ -81,49 +78,53 @@ const ContactoForm = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    //con backend armado por mi
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        setLoading(true);
+        setLoading(true); 
+        try {
+          const response = await fetch(url_send_email, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+          if (!response.ok) {
+            throw new Error('Error al enviar el formulario');
+          }else{
+            setAlertaVisible(true);
+            const data = await response.json();
+        //   console.log('Correo electrónico enviado correctamente:');
+          }
+      
+          
+        } catch (error) {
+            setError(true)
+          console.error('Error al enviar el formulario:', error);
+        } finally {
+            setFormData({
+                        nombre: '',
+                        apellidos: '',
+                        empresa: '',
+                        productoServicio: '',
+                        email: '',
+                        movil: '',
+                        pais: '',
+                        descripcion: '',
+                        consentimiento: false,
+                        empleados: ''
+                    });
+          setLoading(false);
+        }
+      };
 
-        emailjs
-            .send(service, template, formData, {
-                publicKey: publicKey,
-            })
-            .then(
-                (response) => {
-                    console.log('SUCCESS!', response.status, response.text);
-                    setAlertaVisible(true);
-                },
-                (err) => {
-                    console.log('FAILED...', err);
-                    setError('Error al enviar el correo electrónico. Por favor, inténtalo de nuevo más tarde.');
-                }
-            )
-            .finally(() => {
-                setLoading(false);
-            });
-
-        // Limpia el formulario después del envío
-        setFormData({
-            nombre: '',
-            apellidos: '',
-            empresa: '',
-            productoServicio: '',
-            email: '',
-            movil: '',
-            pais: '',
-            descripcion: '',
-            consentimiento: false,
-            empleados: ''
-        });
-    };
     useEffect(() => {
         let timeout = 0
         if (alertaVisible == true || error !== '') {
             timeout = setTimeout(() => {
                 setAlertaVisible(false);
-                setError('');
+                setError(false);
             }, 2000);
         }
         return () => clearTimeout(timeout);
@@ -132,8 +133,10 @@ const ContactoForm = () => {
     // console.log(formData);
     return (<div className='All_div'>
         {loading && (
-            <LoaderContainer >
-                <CircularProgress />
+            
+            <LoaderContainer className='loaderContainer'>
+                <GradientCircularProgress/>
+                {/* <CircularProgress /> */}
             </LoaderContainer>
         )}
         {alertaVisible ? <div className='Alert_visible_div'>
@@ -142,13 +145,13 @@ const ContactoForm = () => {
                 ¡El correo electrónico se envió correctamente!
             </Alert>
         </div>
-            : <div className='Alert_visible_div'></div>}
+            : <div className='Alert_visible_divInactive'></div>}
         {error ? <div className='Alert_visible_div'>
             <Alert severity="error">
-                <AlertTitle>Error</AlertTitle>
-                {error}
+                <AlertTitle >Error al enviar el correo!</AlertTitle>
+                Por favor intente más tarde.
             </Alert>
-        </div> : <div className='Alert_visible_div'> </div>
+        </div> : <div className='Alert_visible_divInactive'> </div>
 
         }
         <Container className={`container_Form ${openMenu || alertaVisible || loading ? 'blur' : ''}`} maxWidth="lg">
